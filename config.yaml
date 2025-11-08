@@ -1,0 +1,26 @@
+RANDOMNESS:
+  torch_seed: 0
+  numpy_seed: 0
+
+EXPERIMENT:
+  name: "exp_1"
+  exp_path: "experiments"
+
+DATASET_PARAMS:
+  db_name: "oil_spill_dataset" # options: swed or snowed
+  db_path: "data/oil_spill_det_dataset" # dataset path
+
+TRAIN_PARAMS:
+  num_epochs: 100
+  batch_size: 32
+  num_workers: 8
+  lr: 0.00005
+
+MODEL_PARAMS:
+  model_config: "b0" # b0-5
+  checkpoint: ~
+
+OUTPUT_PATH:
+  weights_path: "weights"
+  model_name: "b0_rgb.pth"
+  inference_path: "outputs"  
