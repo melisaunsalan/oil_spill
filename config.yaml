@@ -16,14 +16,13 @@ TRAIN_PARAMS:
   batch_size: 32
   num_workers: 1
   lr: 0.00005
-  loss_fn: "default" # default, dice
+  loss_fn: "default" # default, dice, focal, hybrid
 
 MODEL_PARAMS:
   model_config: "b0" # b0-5
-  checkpoint: ~ # path to checkpoint for resuming training
+  checkpoint: "experiments/focal/focal_loss_checkpoint_85.pth"
 
 OUTPUT_PATH:
-  weights_path: "weights"
-  model_name: "b0.pth"
-  inference_path: "result_comparison/segformer"  
-
+  weights_path: "experiments/focal"
+  model_name: "focal_loss_checkpoint_85.pth"
+  inference_path: "result_comparison/segformer_focal"  
